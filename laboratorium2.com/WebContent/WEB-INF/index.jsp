@@ -1,14 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Rejestracja</title>
 </head>
 <body>
-	<form method="post">
-		<label for="imie">Imie: </label>
+	<form action="/laboratorium2.com/submitRegisterForm.html" method="post">
+		<label for="imie">Imię: </label>
 		<br/>
 		<input type="text" id="imie" name="imie">
 		<br/>
@@ -20,10 +20,10 @@
 		<br/>
 		<input type="text" id="stanowisko" name="stanowisko">
 		<br/>
-		<label for="plec">Plec: </label>
+		<label for="plec">Płeć: </label>
 		<br/>
-		<input type="radio" id="mezczyzna" name="mezczyzna" value="mezczyzna">
-		<input type="radio" id="kobieta" name="kobieta" value="kobieta">
+		<input type="radio" id="mezczyzna" name="plec" value="mezczyzna"><label for="mezczyzna">Mężczyzna</label>
+		<input type="radio" id="kobieta" name="plec" value="kobieta"><label for="kobieta">Kobieta</label>
 		<br/>
 		<label for="email">Email: </label>
 		<br/>
@@ -33,14 +33,14 @@
 		<br/>
 		<input type="text" id="login" name="login">
 		<br/>
-		<label for="haslo">Haslo: </label>
+		<label for="haslo">Hasło: </label>
 		<br/>
 		<input type="password" id="haslo" name="haslo">
 		<br/>
-		<label for="powthaslo">Powtorz haslo: </label>
+		<label for="powthaslo">Powtórz hasło: </label>
 		<br/>
 		<input type="password" id="powthaslo" name="powthaslo">
-		<br/>
+		<br/><br/>
 		<input type="submit" value="Zarejestruj">
 	</form>
 </body>
