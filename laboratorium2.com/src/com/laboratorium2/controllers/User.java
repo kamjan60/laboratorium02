@@ -1,7 +1,11 @@
 package com.laboratorium2.controllers;
 
+import javax.validation.constraints.Size;
+
 public class User {
+	@Size(min=1, max=2)
 	private String imie;
+	
 	private String nazwisko;
 	private String stanowisko;
 	private String plec;

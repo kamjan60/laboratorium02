@@ -8,6 +8,6 @@
 </head>
 <body>
 <h1>Gratulacje, rejestracja zakończona powodzeniem!</h1>
-<h2>${msg}</h2>
+<h2>${user.login} ${user.haslo}</h2>
 </body>
 </html>

@@ -7,7 +7,7 @@
 <title>Rejestracja</title>
 </head>
 <body>
-	<form action="/laboratorium2.com/submitRegisterForm.html" method="post">
+	<form action="/com.laboratorium2/submitRegisterForm.html" method="post">
 		<label for="imie">Imię: </label>
 		<br/>
 		<input type="text" id="imie" name="imie">
@@ -22,8 +22,8 @@
 		<br/>
 		<label for="plec">Płeć: </label>
 		<br/>
-		<input type="radio" id="mezczyzna" name="plec" value="mezczyzna"><label for="mezczyzna">Mężczyzna</label>
-		<input type="radio" id="kobieta" name="plec" value="kobieta"><label for="kobieta">Kobieta</label>
+		<input type="radio" id="mezczyzna" name="plec" value="Mężczyzna"><label for="mezczyzna">Mężczyzna</label>
+		<input type="radio" id="kobieta" name="plec" value="Kobieta"><label for="kobieta">Kobieta</label>
 		<br/>
 		<label for="email">Email: </label>
 		<br/>
