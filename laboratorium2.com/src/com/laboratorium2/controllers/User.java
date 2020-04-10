@@ -1,46 +1,42 @@
 package com.laboratorium2.controllers;
 
-import javax.persistence.*;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-@Entity
-@Table(name="User")
+
 public class User {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+
 	
 	@Pattern(regexp="[^0-9]*", message="Imiê nie mo¿e zawieraæ liczby!")
 	@Size(min=1, message="Nie mo¿e byæ puste!")
-	@Column(name="Imie")
+
 	private String imie;
 	
 	
 	@Pattern(regexp="[^0-9]*", message="Nazwisko nie mo¿e zawieraæ liczby!")
 	@Size(min=1, message="Nie mo¿e byæ puste!")
-	@Column(name="Nazwisko")
+
 	private String nazwisko;
 	
 	@Size(min=1, message="Nie mo¿e byæ puste!")
-	@Column(name="Stanowisko")
+
 	private String stanowisko;
 	
 	@Size(min=1, message="Nie mo¿e byæ puste!")
-	@Column(name="Plec")
+
 	private String plec;
 	
 	@Pattern(regexp="[\\S]*@[\\S]*[.][\\S]*", message="Email musi zawieraæ znak @ oraz . zaœ zarówno przed nimi i po nich musza wystêpowaæ znaki.")
 	@Size(min=1, message="Nie mo¿e byæ puste!")
-	@Column(name="Email", unique=true)
+
 	private String email;
 	
 	@Size(min=5, message="Nie mo¿e byæ krótszy ni¿ 5 znaków!")
-	@Column(name="Login", unique=true)
+
 	private String login;
 	
 	@Size(min=6, message="Nie mo¿e byæ krótszy ni¿ 6 znaków!")
-	@Column(name="Haslo")
+
 	private String haslo;
 	
 	private String powthaslo;

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
+import java.sql.*;
 
 @Controller
 public class UserRegisterController {
@@ -31,9 +31,12 @@ public class UserRegisterController {
 			}
 			return model;
 		}
-		else {
-		ModelAndView model=new ModelAndView("RegisterSuccess");
-		return model;
+		else { 
+			DBDriver driver = new DBDriver();
+			driver.getData(user.getImie(), user.getNazwisko(), user.getStanowisko(), user.getPlec(), user.getEmail(), user.getLogin(), user.getHaslo());
+			driver.pushToDb();
+			ModelAndView model=new ModelAndView("RegisterSuccess");
+			return model;
 		}
 	}
 }
