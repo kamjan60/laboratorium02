@@ -21,9 +21,14 @@ public class UserRegisterController {
 	
 	@RequestMapping(value="/submitRegisterForm.html", method=RequestMethod.POST)
 	public ModelAndView submitRegisterForm( @Valid @ModelAttribute("user") User user, BindingResult result){
-
-		if(result.hasErrors()) {
+		if(result.hasErrors() || !user.getHaslo().equals(user.getPowthaslo())) {
 			ModelAndView model = new ModelAndView("index");
+			if(!user.getHaslo().equals(user.getPowthaslo())) {
+				model.addObject("pwdnotmatch","Has³a nie pasuj¹!");
+			}
+			else {
+				model.addObject("pwdnotmatch","");
+			}
 			return model;
 		}
 		else {
