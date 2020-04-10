@@ -34,7 +34,7 @@ public class UserRegisterController {
 		else { 
 			DBDriver driver = new DBDriver();
 			driver.getData(user.getImie(), user.getNazwisko(), user.getStanowisko(), user.getPlec(), user.getEmail(), user.getLogin(), user.getHaslo());
-			driver.pushToDb();
+			driver.pushData();
 			ModelAndView model=new ModelAndView("RegisterSuccess");
 			return model;
 		}

@@ -14,7 +14,7 @@ public class DBDriver {
 	static String email="Default@email.com";
 	static String login="Default";
 	static String haslo="Default";
-	public static void pushToDb() {
+	public void pushData() {
 		try {
 			Class.forName("com.laboratorium2.controllers.DBDriver");
 			Connection myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_lab?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT","user","ZAQ!2wsx");
