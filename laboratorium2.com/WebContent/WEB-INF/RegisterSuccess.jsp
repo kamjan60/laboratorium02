@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>SUCCESS!!!</title>
 </head>
 <body>
 <h1>Gratulacje, rejestracja zakończona powodzeniem!</h1>

@@ -20,16 +20,15 @@ public class UserRegisterController {
 	}
 	
 	@RequestMapping(value="/submitRegisterForm.html", method=RequestMethod.POST)
-	public ModelAndView submitRegisterForm(@Valid @ModelAttribute("user") User user, BindingResult result){
-		
+	public ModelAndView submitRegisterForm( @Valid @ModelAttribute("user") User user, BindingResult result){
+
 		if(result.hasErrors()) {
 			ModelAndView model = new ModelAndView("index");
 			return model;
 		}
-		
-		
+		else {
 		ModelAndView model=new ModelAndView("RegisterSuccess");
 		return model;
-		
+		}
 	}
 }
