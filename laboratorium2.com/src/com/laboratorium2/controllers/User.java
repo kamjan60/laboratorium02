@@ -9,17 +9,17 @@ public class User {
 	
 	@Pattern(regexp="[^0-9]*", message="Imiê nie mo¿e zawieraæ liczby!")
 	@Size(min=1, message="Nie mo¿e byæ puste!")
-
+	@Size(max=40, message="Liczba znaków wykracza poza wymagany zakres (40)")
 	private String imie;
 	
 	
 	@Pattern(regexp="[^0-9]*", message="Nazwisko nie mo¿e zawieraæ liczby!")
 	@Size(min=1, message="Nie mo¿e byæ puste!")
-
+	@Size(max=50, message="Liczba znaków wykracza poza wymagany zakres (40)")
 	private String nazwisko;
 	
 	@Size(min=1, message="Nie mo¿e byæ puste!")
-
+	@Size(max=50, message="Liczba znaków wykracza poza wymagany zakres (50)")
 	private String stanowisko;
 	
 	@Size(min=1, message="Nie mo¿e byæ puste!")
@@ -28,15 +28,15 @@ public class User {
 	
 	@Pattern(regexp="[\\S]*@[\\S]*[.][\\S]*", message="Email musi zawieraæ znak @ oraz . zaœ zarówno przed nimi i po nich musza wystêpowaæ znaki.")
 	@Size(min=1, message="Nie mo¿e byæ puste!")
-
+	@Size(max=100, message="Liczba znaków wykracza poza wymagany zakres (100)")
 	private String email;
 	
-	@Size(min=5, message="Nie mo¿e byæ krótszy ni¿ 5 znaków!")
-
+	@Size(min=5, max=100, message="Nie mo¿e byæ krótszy ni¿ 5 znaków!")
+	@Size(max=100, message="Liczba znaków wykracza poza wymagany zakres (100)")
 	private String login;
 	
 	@Size(min=6, message="Nie mo¿e byæ krótszy ni¿ 6 znaków!")
-
+	@Size(max=100, message="Liczba znaków wykracza poza wymagany zakres (100)")
 	private String haslo;
 	
 	private String powthaslo;
